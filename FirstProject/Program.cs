@@ -127,7 +127,36 @@ namespace FirstProject
                 Console.WriteLine("Neki od brojeva su jednaki");
             }
             
-            // Zadatak 2
+            // Zadatak 2 Napisati program koji traži od korisnika da unese tri brojeva i ispisuje najmanji unešeni broj.
+
+            int broj1, broj2, broj3;
+            Console.WriteLine("Unesite prvi broj:");
+            broj1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite drugi broj:");
+            broj2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite treci broj:");
+            broj3 = int.Parse(Console.ReadLine());
+
+            if (broj1 < broj2 && broj1 < broj3)
+            {
+                Console.WriteLine("Prvi broj je najmanji");
+            }
+            else if (broj2 < broj1 && broj2 < broj3)
+            {
+                Console.WriteLine("Drugi broj je najmanji");
+            }
+            else if (broj3 < broj1 && broj3 < broj2)
+            {
+                Console.WriteLine("Treci broj je najmanji");
+            }
+            else
+            {
+                Console.WriteLine("Neki od brojeva su jednaki");
+            }
+            
+            // Zadatak 3 Tražiti od korisnika da se unese ime, prezime i pol, ako je muško pitati ga da li je bio u vojsci.
+            
+            
             
         }
     }
