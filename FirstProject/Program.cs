@@ -100,6 +100,35 @@ namespace FirstProject
             Console.WriteLine(broj10 - broj11);
             Console.WriteLine(broj10 * broj11);
             Console.WriteLine(broj10 / broj11);
+            
+            // Vezba 3
+
+            // Zadatak 1 Napisati program koji traži od korisnika da unese tri broja i ispisuje najveći unešeni broj.
+
+            int broj1, broj2, broj3;
+            Console.WriteLine("Unesite prvi broj:");
+            broj1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite drugi broj:");
+            broj2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite treci broj:");
+            broj3 = int.Parse(Console.ReadLine());
+
+            if (broj1 > broj2 && broj1 > broj3)
+            {
+                Console.WriteLine("Prvi broj je najveci");
+            } else if (broj2 > broj1 && broj2 > broj3)
+            {
+                Console.WriteLine("Drugi broj je najveci");
+            } else if (broj3 > broj1 && broj3 > broj2)
+            {
+                Console.WriteLine("Treci broj je najveci");
+            } else
+            {
+                Console.WriteLine("Neki od brojeva su jednaki");
+            }
+            
+            // Zadatak 2
+            
         }
     }
 }
