@@ -261,6 +261,201 @@ namespace FirstProject
 
             // Zadatak 10 Unose se brojevi sve dok se ne unese dva puta broj deljiv sa 5. Svaki put kada se unese broj deljiv sa 3 resetuje se brojač petica. Ispisati srednju vrednost parnih brojeva.
             
+            // VEZBA 6
+            
+            //int a = 7, b = 3, max;
+            //if (a > b)
+            //{
+            //    max = a;
+            //} else
+            //{
+            //    max = b;
+            //}
+
+            //max = (a > b) ? a : b;
+
+            // Napraviti program koji na osnovu unetog broja(1 - 7) ispisuje dan u nedelji
+
+            //int broj3;
+            //Console.WriteLine("Unesi broj dana:");
+            //broj3 = int.Parse(Console.ReadLine());
+
+            //try
+            //{
+            //    switch (broj3)
+            //    {
+            //        case 1:
+            //            Console.WriteLine("Ponedeljak");
+            //            break;
+            //        case 2:
+            //            Console.WriteLine("Utorak");
+            //            break;
+            //        case 3:
+            //            Console.WriteLine("Sreda");
+            //            break;
+            //        case 4:
+            //            Console.WriteLine("Cetvrtak");
+            //            break;
+            //        case 5:
+            //            Console.WriteLine("Petak");
+            //            break;
+            //        case 6:
+            //            Console.WriteLine("Subota");
+            //            break;
+            //        case 7:
+            //            Console.WriteLine("Nedelja");
+            //            break;
+            //        default:
+            //            Console.WriteLine("Nema dana sa tim brojem");
+            //            break;
+            //    }
+
+            //}
+            //catch (Exception greska)
+            //{
+            //    Console.WriteLine($"Doslo je do greske {greska.Message}");
+            //}
+
+            //// Napraviti program koji ispisuje uspeh na osnovu dobijene ocene
+
+            //int ocena;
+            //Console.WriteLine("Unesi ocenu:");
+            //ocena = int.Parse(Console.ReadLine());
+
+            //switch (ocena)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Nedovoljan");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Dovoljan");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Dobar");
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("Vrlo dobar");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("Odlican");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Unesite validnu ocenu");
+            //        break;
+            //}
+
+            //// Napisati program za ispis broja dana u mesecu na osnovu sledećih uslova
+            //// Moguce je napraviti jos jedan if sa godinom kao varijabilom za broj dana u februaru godine koja nije prestupna (if ostatak deljenja godine sa 4 bude 0, onda je prestupna)
+
+            //int mesec;
+            //Console.WriteLine("Unesi mesec u 2020. godini:");
+            //mesec = int.Parse(Console.ReadLine());
+
+            //switch (mesec)
+            //{
+            //    case 1:
+            //    case 3:
+            //    case 5:
+            //    case 7:
+            //    case 8:
+            //    case 10:
+            //    case 12:
+            //        Console.WriteLine("Mesec ima 31 dan");
+            //        break;
+            //    case 4:
+            //    case 6:
+            //    case 9:
+            //    case 11:
+            //        Console.WriteLine("Mesec ima 30 dana");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Prestupna godina, mesec ima 29 dana");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Unesite validan broj meseca");
+            //        break;
+            //}
+
+            //// Napisati program koji za upisani samoglasnik uvećava brojač odgovarajućeg samoglasnika.
+
+            //string tekst;
+            //Console.WriteLine("Unesite neki tekst:");
+            //tekst = Console.ReadLine();
+            //int brojac = 0;
+
+            //foreach (var samoglasnik in tekst)
+            //{
+            //    if (samoglasnik == 'a' || samoglasnik == 'A' || samoglasnik == 'e' || samoglasnik == 'E' || samoglasnik == 'i' || samoglasnik == 'I' || samoglasnik == 'o' || samoglasnik == 'O' || samoglasnik == 'u' || samoglasnik == 'U')
+            //    {
+            //        brojac++;
+            //    }
+            //}
+
+            //Console.WriteLine($"Samoglasnik se pojavljuje {brojac} puta");
+
+            //// Korisnik unosi određeni tekst, poveriti koliko se puta pojavilo slovo „i“, ukoliko se pojavilo više od 2 puta ispisati odgovarajuću poruku, u suprotnom izaći iz programa.
+
+            //string tekst2;
+            //Console.WriteLine("Unesite neki tekst za brojanje samoglasnika I:");
+            //tekst2 = Console.ReadLine();
+            //int brojac2 = 0;
+
+            //foreach (var slovoi in tekst2)
+            //{
+            //    if (slovoi == 'i' || slovoi == 'I')
+            //    {
+            //        brojac2++;
+            //    }
+            //}
+
+            //if (brojac2 > 2)
+            //{
+            //    Console.WriteLine($"Slovo i je upisano {brojac2} puta");
+            //} else
+            //{
+            //    System.Environment.Exit(0);
+            //}
+
+            //// Korisnik unosi određeni tekst, poveriti koliko se puta pojavilo slovo „a“ u tekstu. Ispisti poruku sa informcijom koliko se puta pojavilo slovo „a“.
+
+            //string tekst3;
+            //Console.WriteLine("Unesi tekst za brojanje samoglasnika A:");
+            //tekst3 = Console.ReadLine();
+            //int brojac3 = 0;
+
+            //foreach (var slovo in tekst3)
+            //{
+            //    if (slovo == 'a' || slovo == 'A')
+            //    {
+            //        brojac3++;
+            //    }
+            //}
+
+            //Console.WriteLine($"Slovo a pojavljuje se " + brojac3 + " puta");
+
+            //// Unose se dva broja, ispisuju se četiri matematičke operacije. U zavisnosti od izabrane izračunava se rezultat.
+
+            //// Napisati program koji broj samoglasnika u reči/rečenici. Ukoliko je reč/rečenica prazna, ispisati poruku „Unet je prazan string“, ukoliko su uneti samo razmaci, brojevi ili specijalni karakteri ispisati „Brojevi, razmaci ili karatkeri“, a na kraju ispisati poruku „Uspešno računanje“.
+
+            string tekst4;
+            Console.WriteLine("Unesite neki tekst za brojanje samoglasnika i mogucu gresku:");
+            tekst4 = Console.ReadLine();
+            int brojac4 = 0;
+
+            foreach (var samoglasnik2 in tekst4)
+            {
+                if (samoglasnik2 == 'a' || samoglasnik2 == 'A' || samoglasnik2 == 'e' || samoglasnik2 == 'E' || samoglasnik2 == 'i' || samoglasnik2 == 'I' || samoglasnik2 == 'o' || samoglasnik2 == 'O' || samoglasnik2 == 'u' || samoglasnik2 == 'U')
+                {
+                    brojac4++;
+                }
+                if (string.IsNullOrEmpty(tekst4))
+                {
+                    Console.WriteLine("Unet je prazan string");
+                } 
+            }
+
+            // Napraviti aplikaciju koja deli dva broja. U slučaju da korisnik pogrešno unese vrednosti, ispisati adekvatnu poruku i ponovo ga naterati da unosi vrednosti. Program se izvršava sve dok korisnik ne unese ispravne vrednosti.
+            
         }
     }
 }
