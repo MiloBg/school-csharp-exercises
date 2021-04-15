@@ -101,7 +101,7 @@ namespace FirstProject
             Console.WriteLine(broj10 * broj11);
             Console.WriteLine(broj10 / broj11);
             
-            // Vezba 3
+            // Vezba 3 PETLjA IF
 
             // Zadatak 1 Napisati program koji traži od korisnika da unese tri broja i ispisuje najveći unešeni broj.
 
@@ -181,9 +181,128 @@ namespace FirstProject
             // Napisati program koji pita korisnika „Koliko imaš godina ?“.
             // Program treba da ispiše „Besplatan prevoz“ ako je uslov ispunjen ili „ Plaćaš kartu“ ako nije ispunjen.
             
+            int godine;
+            Console.WriteLine("Koliko imaš godina?");
+            godine = int.Parse(Console.ReadLine());
+
+            if (godine <= 7 || godine >= 65)
+            {
+                Console.WriteLine("Besplatan prevoz");
+            }
+            else
+            {
+                Console.WriteLine("Plaćaš kartu");
+            }
             
+            // Zadatak 5 Napisati program koji traži od korisnika da unese broj godina.
+            // Ukoliko korisnik unese broj manji od 18, program treba da ispiše „Korisnik je maloletan“;
+            // U suprotnom - „Korisnik je punoletan“.
             
-            // Vezba 4
+            int godine;
+            Console.WriteLine("Unesite broj godina:");
+            godine = int.Parse(Console.ReadLine());
+
+            if (godine < 18)
+            {
+                Console.WriteLine("Korisnik je maloletan");
+            }
+            else
+            {
+                Console.WriteLine("Korisnik je punoletan");
+            }
+            
+            // Zadatak 6 Generiše se slučajan broju intervalu(1, 15). Odrediti da li je broj veći od 5 a manji od 10 i ispšite ga.
+            
+            Random rnd = new Random();
+            int broj;
+
+            broj = rnd.Next(1, 15);
+            Console.WriteLine("Slučajno izabran broj od 1-15 je " + broj);
+
+            if (broj > 5 && broj < 10)
+            {
+                Console.WriteLine("Ovaj broj je veci od 5, a manji od 10");
+            }
+            else
+            {
+                Console.WriteLine("Ovaj broj nije izmedju 5 i 10");
+            }
+            
+            // Zadatak 7 Generiše se slučajan broj u intervalu (1,100) ako je generisani broj deljiv sa 10, ispiši ga.
+            
+            Random rnd = new Random();
+            int broj;
+
+            broj = rnd.Next(1, 100);
+            Console.WriteLine("Slučajno izabran broj od 1-100 je " + broj);
+
+            if (broj % 10 == 0)
+            {
+                Console.WriteLine($"Broj {broj} je deljiv sa 10");
+            }
+            else
+            {
+                Console.WriteLine("Ovaj broj nije deljiv sa 10");
+            }
+            
+            // Zadatak 8 Generiše se slučajan broj u intervalu (1,10). Proveriti da li je broj neparan i ako jeste ispišite ga.
+            
+            Random rnd = new Random();
+            int broj;
+
+            broj = rnd.Next(1, 10);
+            Console.WriteLine("Slučajno izabran broj od 1-10 je " + broj);
+
+            if (broj % 2 != 0)
+            {
+                Console.WriteLine($"Broj {broj} je neparan");
+            }
+            else
+            {
+                Console.WriteLine("Ovaj broj je paran");
+            }
+            
+            // Zadatak 9 Generiše se slučajan broj u intervalu (1, 50). Ako je generisani broj paran i u intervalu (1, 25) ispišite ga.
+            
+            Random rnd = new Random();
+            int broj;
+
+            broj = rnd.Next(1, 50);
+            Console.WriteLine("Slučajno izabran broj od 1-50 je " + broj);
+
+            if (broj % 2 == 0 && broj >= 1 && broj <= 25)
+            {
+                Console.WriteLine($"Broj {broj} je u intervalu od 1 do 25 i paran je");
+            }
+            else
+            {
+                Console.WriteLine("Ovaj broj nije u intervalu od 1 do 25, ili nije paran");
+            }
+            
+            // Zadatak 10 Generiše se slučajan broj u intervalu (7, 77).
+            // Ukoliko je broj paran, proverava se da li je u intervalu od 35 do 77 i u tom slučaju ga ispisati.
+            // U slučaju da je neparan, treba ga prikazati ako je manji od 35 i veći od 15.
+            
+            Random rnd = new Random();
+            int broj;
+
+            broj = rnd.Next(7, 77);
+            Console.WriteLine("Slučajno izabran broj od 7-77 je " + broj);
+
+            if (broj % 2 == 0 && broj >= 35 && broj <= 77)
+            {
+                Console.WriteLine($"Broj {broj} je paran i u intervalu od 35 do 77");
+            }
+            else if (broj % 2 != 0 && broj <= 35 && broj >= 15)
+            {
+                Console.WriteLine($"Broj {broj} je neparan i u intervalu od 15 do 35");
+            }
+            else
+            {
+                Console.WriteLine("Ovaj broj ne ulazi ni u jednu kategoriju");
+            }
+            
+            // Vezba 4 PETLjE WHILE I DO WHILE
 
             //string lozinka = "Pera";
 
