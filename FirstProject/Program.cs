@@ -164,9 +164,9 @@ namespace FirstProject
             Console.WriteLine("Unesite vase prezime:");
             prezime = Console.ReadLine();
             Console.WriteLine("Unesite vas pol (M ili Z):");
-            pol = Console.ReadLine();
-            
-            if (pol == M)
+            pol = char.Parse(Console.ReadLine());
+
+            if (pol == 'M' || pol == 'm')
             {
                 Console.WriteLine("Da li ste bili u vojsci?");
                 Console.ReadLine();
@@ -303,16 +303,20 @@ namespace FirstProject
             }
             
             // Vezba 4 PETLjE WHILE I DO WHILE
+            
+            // Zadatak 1 Unosi se lozinka, sve dok se ne unese ispravna lozinka program se ne prekida.
 
-            //string lozinka = "Pera";
+            string lozinka = "Pera";
 
-            //do
-            //{
-            //    Console.WriteLine("Unesi lozinku");
-            //    lozinka = Console.ReadLine();
-            //} while (lozinka!="Pera");  //Uslov
+            do
+            {
+                Console.WriteLine("Unesi lozinku");
+                lozinka = Console.ReadLine();
+            }
+            while (lozinka != "Pera");  //Uslov
 
-            // Zadatak 2
+            // Zadatak 2 Generišu se dva broja, sve dok je a veće od b ispisuju se ti brojevi (u jednoj liniji iizmeđu njih se ispisuje zarez).
+            // U slučaju da je b veći izlazi se iz programa.
 
             //int broj1, broj2;
 
