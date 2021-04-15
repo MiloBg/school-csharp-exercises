@@ -7,7 +7,7 @@ namespace FirstProject
         static void Main(string[] args)
         {
             // Vezba 1
-            //1.Ispišite ime i prezime u dvareda.
+            //1.Ispišite ime i prezime u dva reda.
             //2.Ispiši svoje ime i prezime u dva reda koristeći samo jednu naredbu WRITE.
             //3.Ispisati ime i prezime pa odvojiti jedan tab pa ispisati broj indeksa.
             //4.Ispisati tri imena u dve kolone:
@@ -127,7 +127,7 @@ namespace FirstProject
                 Console.WriteLine("Neki od brojeva su jednaki");
             }
             
-            // Zadatak 2 Napisati program koji traži od korisnika da unese tri brojeva i ispisuje najmanji unešeni broj.
+            // Zadatak 2 Napisati program koji traži od korisnika da unese tri broja i ispisuje najmanji unešeni broj.
 
             int broj1, broj2, broj3;
             Console.WriteLine("Unesite prvi broj:");
@@ -155,6 +155,31 @@ namespace FirstProject
             }
             
             // Zadatak 3 Tražiti od korisnika da se unese ime, prezime i pol, ako je muško pitati ga da li je bio u vojsci.
+            
+            string ime;
+            string prezime;
+            string pol;
+            Console.WriteLine("Unesite vase ime:");
+            ime = Console.ReadLine();
+            Console.WriteLine("Unesite vase prezime:");
+            prezime = Console.ReadLine();
+            Console.WriteLine("Unesite vas pol (M ili Z):");
+            pol = Console.ReadLine();
+            
+            if (pol == M)
+            {
+                Console.WriteLine("Da li ste bili u vojsci?");
+                Console.ReadLine();
+                Console.WriteLine("Hvala na odgovoru, gospodine " + prezime);
+            }
+            else
+            {
+                Console.WriteLine("Hvala na odgovoru, gospodjo/djice " + prezime);
+            }
+            
+            // Zadatak 4 Deca i penzioneri imaju besplatan prevoz. Decom se smatraju osobe do 7 godina,apenzionerima osobe preko 65 godina.
+            // Napisati program koji pita korisnika „Koliko imaš godina ?“.
+            // Program treba da ispiše „Besplatan prevoz“ ako je uslov ispunjen ili „ Plaćaš kartu“ ako nije ispunjen.
             
             
             
