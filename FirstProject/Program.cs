@@ -378,24 +378,47 @@ namespace FirstProject
 
             // Zadatak 5 Unosi se broj sve dok je u intervalu od 10-30. Izračunati sumu parnih i broj neparnih brojeva.
 
-            
+            int broj, suma = 0, brojac = 0;
+
+            do
+            {
+                Console.WriteLine("Unesite broj izmedju 1 i 30:");
+                broj = int.Parse(Console.ReadLine());
+                if (broj >= 10 && broj <= 30 && broj % 2 == 0)
+                {
+                    suma += broj;
+                }
+                else if (broj >= 10 && broj <= 30 && broj % 2 != 0)
+                {
+                    brojac++;
+                } else
+                {
+                    Console.WriteLine("Uneseni broj nije u rasponu od 10 do 30");
+                }
+            } while (broj >= 10 && broj <= 30);
+            Console.WriteLine($"Pre broja van raspona, suma parnih brojeva je {suma}, a broj neparnih je {brojac}");
 
             // Zadatak 6 Generišu se dva broja u intervalu od 1-100. Ako je drugi broj veći od prvog,
             // prvi broj se uvećava dva puta sve dok ne bude veći od drugog. Ispisati koliko je prvi broj puta morao da se uveća.
 
-            //int broj1, broj2;
-            //Random rnd = new Random();
+            Random rnd = new Random();
+            int broj1, broj2, brojac = 0;
 
-            //broj1 = rnd.Next(1, 100);
-            //broj2 = rnd.Next(1, 100);
+            broj1 = rnd.Next(1, 100);
+            broj2 = rnd.Next(1, 100);
+            Console.WriteLine($"Prvi broj je {broj1}, a drugi je {broj2}");
 
-            //while (broj1 > broj2)
-            //{
-            //    Console.WriteLine(broj1 + " je vece od " + broj2);
-            //    break;
-            //}
+            while (broj2 > broj1)
+            {
+                broj1 *= 2;
+                Console.WriteLine($"Prvi broj je sada uvecan dva puta i iznosi {broj1}, drugi je jos uvek {broj2}");
+                brojac++;
+            }
+            Console.WriteLine($"Prvi broj je morao da se uveca {brojac} puta da bi bio veci od drugog");
 
             // Zadatak 7 Unose se brojevi sve dok je zbir svakog trećeg broja manji od 30. Nakon toga ispisati koliko brojeva je uneto i njihov zbir.
+            
+            
 
             // Zadatak 8 Unosi se broj od 1-20. Nakon toga se generišu brojevi od 1 - 20 sve dok generisani broj ne bude jednak unetom broju ili broj pokušaja ne bude manji od 20.
 
