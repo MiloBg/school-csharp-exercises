@@ -420,11 +420,94 @@ namespace FirstProject
             
             
 
-            // Zadatak 8 Unosi se broj od 1-20. Nakon toga se generišu brojevi od 1 - 20 sve dok generisani broj ne bude jednak unetom broju ili broj pokušaja ne bude manji od 20.
+            // Zadatak 8 Unosi se broj od 1-20. Nakon toga se generišu brojevi od 1 - 20 sve dok generisani broj ne bude jednak unetom broju,
+            // ili broj pokušaja ne bude manji od 20.
+            
+            int broj1, broj2, brojac = 0;
+            Console.WriteLine("Unesite brojod 1 do 20:");
+            broj1 = int.Parse(Console.ReadLine());
 
-            // Zadatak 9 Unose se ekstenzije (xlsx, docx, xml, cs, txt) za svaki unos ispisuje se naziv programa koji pokreće taj fajl. Sve dok se ne unese exit program nastavlja da se izvršava.
+            do
+            {
+                Random rnd = new Random();
+                broj2 = rnd.Next(1, 20);
+                Console.WriteLine($"Nasumicno izabran broj je {broj2}");
+                brojac++;
+            } while (broj1 != broj2 && brojac < 20);
 
-            // Zadatak 10 Unose se brojevi sve dok se ne unese dva puta broj deljiv sa 5. Svaki put kada se unese broj deljiv sa 3 resetuje se brojač petica. Ispisati srednju vrednost parnih brojeva.
+            if (brojac < 20)
+            {
+                Console.WriteLine($"Nadjeni su isti brojevi iz {brojac} pokusaja");
+            }
+            else
+            {
+                Console.WriteLine($"Nisu nadjeni isti brojevi za manje od 20 pokusaja");
+            }
+
+            // Zadatak 9 Unose se ekstenzije (xlsx, docx, xml, cs, txt) za svaki unos ispisuje se naziv programa koji pokreće taj fajl.
+            // Sve dok se ne unese exit program nastavlja da se izvršava.
+            
+            string ekstenzija;
+            Console.WriteLine("Unesite ekstenziju fajla (xlsx, docx, xml, cs, txt):");
+            ekstenzija = Console.ReadLine();
+            if (ekstenzija == "xlsx")
+            {
+                Console.WriteLine("Ovaj fajl otvara Microsoft Excel");
+            }
+            else if (ekstenzija == "docx")
+            {
+                Console.WriteLine("Ovaj fajl otvara Microsoft Word");
+            }
+            else if (ekstenzija == "xml")
+            {
+                Console.WriteLine("Ovaj fajl otvara internet pregledac");
+            }
+            else if (ekstenzija == "cs")
+            {
+                Console.WriteLine("Ovaj fajl otvara internet Visual Studio");
+            }
+            else if (ekstenzija == "txt")
+            {
+                Console.WriteLine("Ovaj fajl otvara Notepad");
+            }
+            else
+            {
+                Console.WriteLine("Unesite validnu ekstenziju");
+            }
+
+            while (ekstenzija != "exit")
+            {
+                Console.WriteLine("Unesite ekstenziju fajla (xlsx, docx, xml, cs, txt). Za izlazak ukucajte exit.");
+                ekstenzija = Console.ReadLine();
+                if (ekstenzija == "xlsx")
+                {
+                    Console.WriteLine("Ovaj fajl otvara Microsoft Excel");
+                }
+                else if (ekstenzija == "docx")
+                {
+                    Console.WriteLine("Ovaj fajl otvara Microsoft Word");
+                }
+                else if (ekstenzija == "xml")
+                {
+                    Console.WriteLine("Ovaj fajl otvara internet pregledac");
+                }
+                else if (ekstenzija == "cs")
+                {
+                    Console.WriteLine("Ovaj fajl otvara internet Visual Studio");
+                }
+                else if (ekstenzija == "txt")
+                {
+                    Console.WriteLine("Ovaj fajl otvara Notepad");
+                } else
+                {
+                    Console.WriteLine("Unesite validnu ekstenziju");
+                }
+            }
+
+            // Zadatak 10 Unose se brojevi sve dok se ne unese dva puta broj deljiv sa 5.
+            // Svaki put kada se unese broj deljiv sa 3 resetuje se brojač petica. Ispisati srednju vrednost parnih brojeva.
+            
+            
             
             // VEZBA 6
             
