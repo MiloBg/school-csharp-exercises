@@ -704,6 +704,111 @@ namespace FirstProject
 
             // Napraviti aplikaciju koja deli dva broja. U slučaju da korisnik pogrešno unese vrednosti, ispisati adekvatnu poruku i ponovo ga naterati da unosi vrednosti. Program se izvršava sve dok korisnik ne unese ispravne vrednosti.
             
+            // VEZBA 7
+            
+            // 1. Unesi 10 brojeva u niz, ispisati samo parne brojeve iz niza.
+
+            int[] niz = new int[10];
+            for (int i = 0; i < niz.Length; i++)
+            {
+                Console.WriteLine("Unesi clanove niza:");
+                niz[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.Write("Parni clanovi niza su: ");
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if (niz[i] % 2 == 0) // gleda se vrednost;
+                {
+                    Console.Write($"{niz[i]} ");
+                }
+            }
+
+            // 2. Generiše se niz od 10 brojeva. Ispisati svaki drugi broj.
+
+            int[] niz = new int[10];
+            Random rnd = new Random();
+
+            for (int i = 0; i < niz.Length; i++)
+            {
+                niz[i] = rnd.Next(1, 20);
+                Console.Write($"{niz[i]} ");
+            }
+
+            Console.WriteLine("su nasumicno izabrani brojevi. Svaki drugi je:");
+
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if (i % 2 != 0) // gleda se vrednost;
+                {
+                    Console.Write($"{niz[i]} ");
+                }
+            }
+
+            // 3. Za n unetih brojeva u niz izračunati sumu parnih i broj neparnih brojeva.
+
+            int[] niz;
+            int n, sumaParnih = 0, brojNeparnih = 0;
+            Console.WriteLine("Unesite broj elemenata niza:");
+            n = int.Parse(Console.ReadLine());
+            niz = new int[n];
+            Random rnd = new Random();
+
+            for (int i = 0; i < niz.Length; i++)
+            {
+                niz[i] = rnd.Next(1, 20);
+                Console.Write($"{niz[i]} ");
+            }
+
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if (niz[i] % 2 == 0)
+                {
+                    sumaParnih += niz[i];
+                } else
+                {
+                    brojNeparnih++;
+                }
+            }
+
+            Console.WriteLine($"Suma parnih brojeva je {sumaParnih}, a broj neparnih je {brojNeparnih}");
+
+            // 4. Za n unetih brojeva u niz ispisati samo brojeve deljive sa 5 i izračunati srednju vrednost tih brojeva.
+
+
+
+            // 5. Generisati niz od 7 brojeva i sortirati brojeve od najmanjeg ka najvećem.
+
+            // Dva fora (jedna i, u njoj j), pa u njoj (if niz[i] >= niz[j]) i sort, i, j = i + 1
+
+
+
+            // 6. Unesi 10 imena u niz, ispisati samo imena koja imaju 5 ili više karaktera.
+
+
+
+            // 7. Niz X[10] čine slučajni brojevi od 1 do 30.Ispisati samo neparne brojeve veće od 15.
+
+
+
+            // 8. U Niz X[20] unose se slučajni brojevi od 1 - 30 u niz Y upisati samo neparne brojeve. Ispisati niz Y.
+
+            // Ne radi se
+
+            // 9. Niz X[20] čine slučajni brojevi od 1 - 15, a niz Y čine samo elementi koji se pojave u nizu X dva ili više puta.
+
+            // Ne radi se
+
+            // 10. Niz X[20] čine slučajni brojevi od 1 - 30.Iz niza X brojeve sa parnim indeksima upisati u niz Y,
+            // a brojeve sa neparnim indeksima upisati u niz Z. Ispisati niz X I Z u dva reda.
+            
+            
+            
+            
+            
+            
+            
+            
         }
     }
 }
