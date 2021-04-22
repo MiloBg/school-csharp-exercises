@@ -775,7 +775,28 @@ namespace FirstProject
 
             // 4. Za n unetih brojeva u niz ispisati samo brojeve deljive sa 5 i izračunati srednju vrednost tih brojeva.
 
+            int[] niz;
+            int n, deljivi = 0, srednja = 0, suma = 0;
+            Console.WriteLine("Unesite broj elemenata niza:");
+            n = int.Parse(Console.ReadLine());
+            niz = new int[n];
+            Random rnd = new Random();
 
+            for (int i = 0; i < niz.Length; i++)
+            {
+                niz[i] = rnd.Next(1, 100);
+                Console.Write($"{niz[i]} ");
+            }
+
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if (niz[i] % 5 == 0)
+                {
+                    deljivi++;
+                    suma += niz[i];
+                    srednja = suma / deljivi;
+                }
+            }
 
             // 5. Generisati niz od 7 brojeva i sortirati brojeve od najmanjeg ka najvećem.
 
