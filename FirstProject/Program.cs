@@ -823,7 +823,82 @@ namespace FirstProject
             // 10. Niz X[20] čine slučajni brojevi od 1 - 30.Iz niza X brojeve sa parnim indeksima upisati u niz Y,
             // a brojeve sa neparnim indeksima upisati u niz Z. Ispisati niz X I Z u dva reda.
             
+            // VEZBA 8
             
+            // i je red, j je kolona
+
+            // 1.Koriscenjem dvodimenzionalnog niza (matrice) napraviti aplikaciju koja ispisuje brojeve kao u tabeli ispod teksta.
+
+            int[,] matrica = new int[5, 5];
+            int brojac = 1;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    matrica[i, j] = brojac;
+                    brojac++;
+                    Console.Write($"{matrica[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+
+            // 2. Napravite aplikaciju za prikaz matrice kao što je prikazano na slici. Dijagonala
+            // matrice ispunjava se sa nulama. Donja strana se ispunjava sa negativnim
+            // jedinicama, a gornja strana se ispunjava sa jedinicama.
+
+            int[,] matrica = new int[5, 5];
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (i == j)
+                    {
+                        matrica[i, j] = 0;
+                    }
+                    else if (i > j)
+                    {
+                        matrica[i, j] = -1;
+                    }
+                    else
+                    {
+                        matrica[i, j] = 1;
+                    }
+                    Console.Write($"{matrica[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+
+            // 3. Koriscenjem dvodimenzionalnog niza (matrice) napraviti aplikaciju koja ispisuje brojeve kao u tabeli ispod teksta.
+
+            int[,] matrica = new int[5, 5];
+
+            for (int i = 0; i < 5; i++)
+            {
+                int brojac = i + 1;
+                for (int j = 0; j < 5; j++)
+                {
+                    matrica[i, j] = brojac;
+                    brojac += 2;
+                }
+                brojac = 0;
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write($"{matrica[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+
+            // 4. Koriscenjem dvodimenzionalnu niza(matrice) napraviti aplikaciju za prikaz tabele
+            // koji predstavlja Paskalov trougao bilo koje velicine. U Paskalovom trouglu, prvi i
+            // drugi red su postavljeni na 1. Svaki element trougla (od treceg reda pa nadole) je
+            // zbir elementa direktno iznad njega i elementa levo od elementa direktno iznad
+            // njega. Pogledajte primer Paskalovog trougla (velicina = 5) ispod.
             
             
             
