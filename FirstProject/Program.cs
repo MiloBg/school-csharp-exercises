@@ -806,11 +806,55 @@ namespace FirstProject
 
             // 6. Unesi 10 imena u niz, ispisati samo imena koja imaju 5 ili više karaktera.
 
+            string[] niz = new string[10];
+            Console.WriteLine("Unetih 10 imena su:");
+            niz[0] = "Milovan";
+            niz[1] = "Natasa";
+            niz[2] = "Leo";
+            niz[3] = "Lora";
+            niz[4] = "Dajana";
+            niz[5] = "Nina";
+            niz[6] = "Darko";
+            niz[7] = "Marko";
+            niz[8] = "Marija";
+            niz[9] = "Luna";
 
+            foreach (var ime in niz)
+            {
+                Console.Write($"{ime} ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Imena sa 5 ili vise karaktera su:");
+            foreach (var ime in niz) {
+            if (ime.Length >= 5)
+            {
+                Console.Write($"{ime} ");
+            }
+            }
 
             // 7. Niz X[10] čine slučajni brojevi od 1 do 30.Ispisati samo neparne brojeve veće od 15.
 
+            int[] x = new int[10];
+            Random rnd = new Random();
 
+            Console.WriteLine("Nasumicno izabrani brojevi od 1 do 30 su:");
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] = rnd.Next(1, 30);
+                Console.Write($"{x[i]} ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Neparni brojevi veci od ili jednaki 15 su:");
+
+            for (int i = 0; i < x.Length; i++)
+            {
+                if (x[i] >= 15 && x[i] % 2 != 0)
+            {
+                Console.Write($"{x[i]} ");
+            }
+            }
 
             // 8. U Niz X[20] unose se slučajni brojevi od 1 - 30 u niz Y upisati samo neparne brojeve. Ispisati niz Y.
 
