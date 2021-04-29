@@ -858,14 +858,92 @@ namespace FirstProject
 
             // 8. U Niz X[20] unose se slučajni brojevi od 1 - 30 u niz Y upisati samo neparne brojeve. Ispisati niz Y.
 
-            // Ne radi se
+            int[] x = new int[20];
+            int[] y = new int[20];
+            Random rnd = new Random();
+
+            Console.WriteLine("Nasumicno izabrani brojevi niza X od 1 do 30 su:");
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] = rnd.Next(1, 30);
+                Console.Write($"{x[i]} ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Nizu Y pripadaju brojevi:");
+
+            for (int i = 0; i < y.Length; i++)
+            {
+                if (x[i] % 2 != 0)
+                {
+                    y[i] = x[i];
+                    Console.Write($"{y[i]} ");
+                }
+            }
 
             // 9. Niz X[20] čine slučajni brojevi od 1 - 15, a niz Y čine samo elementi koji se pojave u nizu X dva ili više puta.
 
-            // Ne radi se
+            int[] x = new int[20];
+            int[] y = new int[20];
+            Random rnd = new Random();
 
-            // 10. Niz X[20] čine slučajni brojevi od 1 - 30.Iz niza X brojeve sa parnim indeksima upisati u niz Y,
+            Console.WriteLine("Nasumicno izabrani brojevi niza X od 1 do 15 su:");
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] = rnd.Next(1, 15);
+                Console.Write($"{x[i]} ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Brojevi niza koji se pojavljuju 2 ili vise puta su:");
+
+            for (int i = 0; i < y.Length; i++)
+            {
+                if (x[i] > 4)       // This line to be fixed
+                {
+                    y[i] = x[i];
+                    Console.Write($"{y[i]} ");
+                }
+            }
+
+            // 10. Niz X[20] čine slučajni brojevi od 1 - 30. Iz niza X brojeve sa parnim indeksima upisati u niz Y,
             // a brojeve sa neparnim indeksima upisati u niz Z. Ispisati niz X I Z u dva reda.
+            
+            int[] x = new int[20];
+            int[] y = new int[20];
+            int[] z = new int[20];
+            Random rnd = new Random();
+
+            Console.WriteLine("Nasumicno izabrani brojevi niza X od 1 do 30 su:");
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] = rnd.Next(1, 30);
+                Console.Write($"{x[i]} ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Nizu Y pripadaju brojevi:");
+
+            for (int i = 0; i < y.Length; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    y[i] = x[i];
+                    Console.Write($"{y[i]} ");
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Nizu Z pripadaju brojevi:");
+
+            for (int i = 0; i < z.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    z[i] = x[i];
+                    Console.Write($"{z[i]} ");
+                }
+            }
             
             // VEZBA 8
             
