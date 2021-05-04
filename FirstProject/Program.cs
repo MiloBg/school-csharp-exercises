@@ -507,6 +507,46 @@ namespace FirstProject
             // Zadatak 10 Unose se brojevi sve dok se ne unese dva puta broj deljiv sa 5.
             // Svaki put kada se unese broj deljiv sa 3 resetuje se brojač petica. Ispisati srednju vrednost parnih brojeva.
             
+            // DODATNI ZADACI 1
+
+            // 1. Napravite program koji traži od korisnika da unese ime, prezime, godinu studija i smer.
+            // Ako je  korisnik uneo  smer Informatika, treba  postaviti pitanje:  “Da li  učiš redovno programiranje”,
+            // ako je odogovor „Da“, program ispisuje poruku: “Samo tako nastavi!”, ako je odgovor „Ne“ program ispisuje poruku: “Počni da učiš!”. 
+
+            string ime, prezime, smer;
+            int godinaStudija;
+
+            Console.WriteLine("Unesite Vase ime:");
+            ime = Console.ReadLine();
+            Console.WriteLine("Unesite Vase prezime:");
+            prezime = Console.ReadLine();
+            Console.WriteLine("Unesite godinu studija:");
+            godinaStudija = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite smer:");
+            smer = Console.ReadLine();
+
+            if (smer == "Informatika" || smer == "informatika")
+            {
+                string odgovor;
+                Console.WriteLine("Da li  učiš redovno programiranje?");
+                odgovor = Console.ReadLine();
+                if (odgovor == "Da" || odgovor == "da")
+                {
+                    Console.WriteLine("Samo tako nastavi!");
+                } else if (odgovor == "Ne" || odgovor == "ne")
+                {
+                    Console.WriteLine("Počni da učiš!");
+                } else
+                {
+                    Console.WriteLine("Ne izbegavaj odgovor :)");
+                }
+            }
+
+            // 2. Generiše se n brojeva u intervalu(1 - 100), ispisati samo parne brojeve.
+            
+            
+            
+            
             
             
             // VEZBA 6 Petlje SWITCH CASE, TRY - CATCH - FINAL i FOREACH
