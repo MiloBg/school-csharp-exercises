@@ -6,13 +6,13 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
-            // Vezba 1
-            //1.Ispišite ime i prezime u dva reda.
-            //2.Ispiši svoje ime i prezime u dva reda koristeći samo jednu naredbu WRITE.
-            //3.Ispisati ime i prezime pa odvojiti jedan tab pa ispisati broj indeksa.
-            //4.Ispisati tri imena u dve kolone:
-            //a.Sa dve naredbe WriteLine.
-            //b.Sa jednom naredbomWrite.
+            // VEZBA 1
+            // 1. Ispišite ime i prezime u dva reda.
+            // 2. Ispiši svoje ime i prezime u dva reda koristeći samo jednu naredbu WRITE.
+            // 3. Ispisati ime i prezime pa odvojiti jedan tab pa ispisati broj indeksa.
+            // 4. Ispisati tri imena u dve kolone:
+            // a. Sa dve naredbe WriteLine.
+            // b. Sa jednom naredbomWrite.
 
             Console.WriteLine("Milovan");
             Console.WriteLine("Srdanovic");
@@ -22,16 +22,16 @@ namespace FirstProject
             Console.WriteLine("McCoy\tSulu\tChekov");
             Console.WriteLine("Picard\tData\tLaForge\nRo\tRiker\tTroy");
 
-            // Vezba 2
+            // VEZBA 2
 
-            //1.Tražiti od korisnika da unese ime i prezime, pol i koliko ima godina. Ispisati unešene vrednosti u dva reda.
-            //2.Napraviti program koji pamti ime i prezime u dve promenljive, pa ih posle ispisuje na ekran.
-            //3.Napisati program koji pamti broj u promenljivu, pa ga ispisuje na ekran.
-            //4.Napisati program koji traži od korisnika da unese dva broja i ispisuje rezultat oduzimanja ta dva broja.
-            //5.Napisati program koji traži od korisnika da unese dva broja(decimal) i ispisuje rezultat deljenja ta dva broja.
-            //6.Napisati program koji traži od korisnika da unese tri broja i ispisuje rezultat tako što sabere prva dva i pomnoži sa trećim.
-            //7.Napisati program koji traži od korisnika da unese dva broja, program treba da odradi sve osnovne operacije(+,-,*,/),
-            //  a rezultat svake operacije se ispisuje u novi red.
+            // 1. Tražiti od korisnika da unese ime i prezime, pol i koliko ima godina. Ispisati unešene vrednosti u dva reda.
+            // 2. Napraviti program koji pamti ime i prezime u dve promenljive, pa ih posle ispisuje na ekran.
+            // 3. Napisati program koji pamti broj u promenljivu, pa ga ispisuje na ekran.
+            // 4. Napisati program koji traži od korisnika da unese dva broja i ispisuje rezultat oduzimanja ta dva broja.
+            // 5. Napisati program koji traži od korisnika da unese dva broja (decimal) i ispisuje rezultat deljenja ta dva broja.
+            // 6. Napisati program koji traži od korisnika da unese tri broja i ispisuje rezultat tako što sabere prva dva i pomnoži sa trećim.
+            // 7. Napisati program koji traži od korisnika da unese dva broja, program treba da odradi sve osnovne operacije(+,-,*,/),
+            // a rezultat svake operacije se ispisuje u novi red.
 
             string ime;
             Console.Write("Unesite ime: ");
@@ -101,7 +101,7 @@ namespace FirstProject
             Console.WriteLine(broj10 * broj11);
             Console.WriteLine(broj10 / broj11);
             
-            // Vezba 3 PETLjA IF
+            // VEZBA 3 PETLjA IF
 
             // Zadatak 1 Napisati program koji traži od korisnika da unese tri broja i ispisuje najveći unešeni broj.
 
@@ -302,7 +302,7 @@ namespace FirstProject
                 Console.WriteLine("Ovaj broj ne ulazi ni u jednu kategoriju");
             }
             
-            // Vezba 4 PETLjE WHILE I DO WHILE
+            // VEZBA 4 PETLjE WHILE I DO WHILE
             
             // Zadatak 1 Unosi se lozinka, sve dok se ne unese ispravna lozinka program se ne prekida.
 
@@ -509,122 +509,171 @@ namespace FirstProject
             
             
             
-            // VEZBA 6
+            // VEZBA 6 Petlje SWITCH CASE, TRY - CATCH - FINAL i FOREACH
             
-            //int a = 7, b = 3, max;
-            //if (a > b)
-            //{
-            //    max = a;
-            //} else
-            //{
-            //    max = b;
-            //}
+            int a = 7, b = 3, max;
+            if (a > b)
+            {
+                max = a;
+            }
+            else
+            {
+                max = b;
+            }
 
-            //max = (a > b) ? a : b;
+            max = (a > b) ? a : b;
 
-            // Napraviti program koji na osnovu unetog broja(1 - 7) ispisuje dan u nedelji
+            // 1. Unose se dva broja, ispisuju se četiri matematičke operacije:
+            // a. sabiranje
+            // b. oduzimanje
+            // c. množenje
+            // d. deljenje.
+            // U zavisnosti od izabrane izračunava se rezultat.
 
-            //int broj3;
-            //Console.WriteLine("Unesi broj dana:");
-            //broj3 = int.Parse(Console.ReadLine());
+            int broj1, broj2;
+            Console.WriteLine("Unesite prvi broj:");
+            broj1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite drugi broj:");
+            broj2 = int.Parse(Console.ReadLine());
 
-            //try
-            //{
-            //    switch (broj3)
-            //    {
-            //        case 1:
-            //            Console.WriteLine("Ponedeljak");
-            //            break;
-            //        case 2:
-            //            Console.WriteLine("Utorak");
-            //            break;
-            //        case 3:
-            //            Console.WriteLine("Sreda");
-            //            break;
-            //        case 4:
-            //            Console.WriteLine("Cetvrtak");
-            //            break;
-            //        case 5:
-            //            Console.WriteLine("Petak");
-            //            break;
-            //        case 6:
-            //            Console.WriteLine("Subota");
-            //            break;
-            //        case 7:
-            //            Console.WriteLine("Nedelja");
-            //            break;
-            //        default:
-            //            Console.WriteLine("Nema dana sa tim brojem");
-            //            break;
-            //    }
+            char operacija;
+            Console.WriteLine("Izaberite jednu od matematickih operacija:");
+            Console.WriteLine("a. sabiranje, b. oduzimanje, c. množenje, d. deljenje");
+            operacija = char.Parse(Console.ReadLine());
 
-            //}
-            //catch (Exception greska)
-            //{
-            //    Console.WriteLine($"Doslo je do greske {greska.Message}");
-            //}
+            switch (operacija)
+            {
+                case 'a':
+                    Console.WriteLine($"Rezultat sabiranja je {broj1 + broj2}");
+                    break;
+                case 'b':
+                    Console.WriteLine($"Rezultat oduzimanja je {broj1 - broj2}");
+                    break;
+                case 'c':
+                    Console.WriteLine($"Rezultat mnozenja je {broj1 * broj2}");
+                    break;
+                case 'd':
+                    Console.WriteLine($"Rezultat deljenja je {broj1 / broj2}");
+                    break;
+                default: Console.WriteLine("Izaberite validnu opciju");
+                    break;
+            }
 
-            //// Napraviti program koji ispisuje uspeh na osnovu dobijene ocene
+            // 2. Napraviti program koji na osnovu unetog broja (1 - 7) ispisuje dan u nedelji.
 
-            //int ocena;
-            //Console.WriteLine("Unesi ocenu:");
-            //ocena = int.Parse(Console.ReadLine());
+            int broj3;
+            Console.WriteLine("Unesi broj dana:");
+            broj3 = int.Parse(Console.ReadLine());
 
-            //switch (ocena)
-            //{
-            //    case 1:
-            //        Console.WriteLine("Nedovoljan");
-            //        break;
-            //    case 2:
-            //        Console.WriteLine("Dovoljan");
-            //        break;
-            //    case 3:
-            //        Console.WriteLine("Dobar");
-            //        break;
-            //    case 4:
-            //        Console.WriteLine("Vrlo dobar");
-            //        break;
-            //    case 5:
-            //        Console.WriteLine("Odlican");
-            //        break;
-            //    default:
-            //        Console.WriteLine("Unesite validnu ocenu");
-            //        break;
-            //}
+            try
+            {
+                switch (broj3)
+                {
+                    case 1:
+                        Console.WriteLine("Ponedeljak");
+                        break;
+                    case 2:
+                        Console.WriteLine("Utorak");
+                        break;
+                    case 3:
+                        Console.WriteLine("Sreda");
+                        break;
+                    case 4:
+                        Console.WriteLine("Cetvrtak");
+                        break;
+                    case 5:
+                        Console.WriteLine("Petak");
+                        break;
+                    case 6:
+                        Console.WriteLine("Subota");
+                        break;
+                    case 7:
+                        Console.WriteLine("Nedelja");
+                        break;
+                    default:
+                        Console.WriteLine("Nema dana sa tim brojem");
+                        break;
+                }
 
-            //// Napisati program za ispis broja dana u mesecu na osnovu sledećih uslova
-            //// Moguce je napraviti jos jedan if sa godinom kao varijabilom za broj dana u februaru godine koja nije prestupna (if ostatak deljenja godine sa 4 bude 0, onda je prestupna)
+            }
+            catch (Exception greska)
+            {
+                Console.WriteLine($"Doslo je do greske {greska.Message}");
+            }
 
-            //int mesec;
-            //Console.WriteLine("Unesi mesec u 2020. godini:");
-            //mesec = int.Parse(Console.ReadLine());
+            // 3. Napraviti  program koji  ispisuje uspeh  na osnovu  dobijene ocene.  Nedeovoljan - 1, Dovoljan - 2, Dobar –3, Vrlo dobar –4 i Odličan –5.
 
-            //switch (mesec)
-            //{
-            //    case 1:
-            //    case 3:
-            //    case 5:
-            //    case 7:
-            //    case 8:
-            //    case 10:
-            //    case 12:
-            //        Console.WriteLine("Mesec ima 31 dan");
-            //        break;
-            //    case 4:
-            //    case 6:
-            //    case 9:
-            //    case 11:
-            //        Console.WriteLine("Mesec ima 30 dana");
-            //        break;
-            //    case 2:
-            //        Console.WriteLine("Prestupna godina, mesec ima 29 dana");
-            //        break;
-            //    default:
-            //        Console.WriteLine("Unesite validan broj meseca");
-            //        break;
-            //}
+            int ocena;
+            Console.WriteLine("Unesi ocenu:");
+            ocena = int.Parse(Console.ReadLine());
 
-            //// Napisati program koji za upisani samoglasnik uvećava brojač odgovarajućeg samoglasnika.
+            switch (ocena)
+            {
+                case 1:
+                    Console.WriteLine("Nedovoljan");
+                    break;
+                case 2:
+                    Console.WriteLine("Dovoljan");
+                    break;
+                case 3:
+                    Console.WriteLine("Dobar");
+                    break;
+                case 4:
+                    Console.WriteLine("Vrlo dobar");
+                    break;
+                case 5:
+                    Console.WriteLine("Odlican");
+                    break;
+                default:
+                    Console.WriteLine("Unesite validnu ocenu");
+                    break;
+            }
+
+            // 4. Napisati program za ispis broja dana u mesecu na osnovu sledećih uslova:
+            // a. 1, 3, 5, 7, 8, 10, 12 – ispisuje se poruka „Mesec ima 31 dan“
+            // b. 4, 6, 9, 11 – ispisuje se poruka „Mesec ima 30 dana“
+            // c. 2 – ispisuje se poruka „Prestupna godina, mesec ima 29 dana“
+            // d. – ispisuje se poruka “Nije prestupna godina, mesec ima 28 dana“
+            
+            int mesec, godina;
+            Console.WriteLine("Unesi mesec:");
+            mesec = int.Parse(Console.ReadLine());
+            Console.WriteLine("Unesi godinu:");
+            godina = int.Parse(Console.ReadLine());
+
+            switch (mesec)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    Console.WriteLine("Mesec ima 31 dan");
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    Console.WriteLine("Mesec ima 30 dana");
+                    break;
+                case 2:
+                    if (godina % 4 != 0)
+                    {
+                        Console.WriteLine("Mesec ima 28 dana");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Prestupna godina, mesec ima 29 dana");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Unesite validan broj meseca");
+                    break;
+            }
+
+            // 5. Napisati program koji za upisani samoglasnik uvećava brojač odgovarajućeg samoglasnika.
 
             //string tekst;
             //Console.WriteLine("Unesite neki tekst:");
