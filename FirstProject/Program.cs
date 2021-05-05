@@ -547,6 +547,53 @@ namespace FirstProject
             
             
             
+            // VEZBA 5 Petlja FOR
+
+            // 1. Za n unetih brojeva izračunati sumu parnih i broj neparnih brojeva.
+
+            int n, a, suma = 0, brojNpb = 0;
+
+            Console.WriteLine("Unesi broj n (koliko brojeva da se unese):");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Unesite broj: ");
+                a = int.Parse(Console.ReadLine());
+                if (a % 2 != 0)
+                {
+                    brojNpb++;
+                } else
+                {
+                    suma += a;
+                }
+            }
+
+            Console.WriteLine($"Za {n} unetih brojeva, broj neparnih bio je {brojNpb}, a suma parnih je {suma}.");
+
+            // 2. Za n unetih brojeva izračunati srednju vrednost tih brojeva.
+            
+            int n, a, srednja = 0, suma = 0;
+
+            Console.WriteLine("Unesi broj n (koliko brojeva da se unese):");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Unesite broj: ");
+                a = int.Parse(Console.ReadLine());
+                suma += a;
+                srednja = suma / n;
+            }
+
+            Console.WriteLine($"Za {n} unetih brojeva, njihova srednja vrednost je {srednja}.");
+            
+            // 3. Treba ispisati n generisanih brojeva od 10 do 100. Ako je broj paran i između 20 i 40 ne treba da se ispisuje,
+            // a ako je broj neparan između 70 i 90 prekinuti generisanje brojeva.
+            
+            
+            
+            
             
             
             // VEZBA 6 Petlje SWITCH CASE, TRY - CATCH - FINAL i FOREACH
