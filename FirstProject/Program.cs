@@ -969,7 +969,7 @@ namespace FirstProject
             }
             }
 
-            // 7. Niz X[10] čine slučajni brojevi od 1 do 30.Ispisati samo neparne brojeve veće od 15.
+            // 7. Niz X[10] čine slučajni brojevi od 1 do 30. Ispisati samo neparne brojeve veće od 15.
 
             int[] x = new int[10];
             Random rnd = new Random();
@@ -1158,11 +1158,56 @@ namespace FirstProject
             // zbir elementa direktno iznad njega i elementa levo od elementa direktno iznad
             // njega. Pogledajte primer Paskalovog trougla (velicina = 5) ispod.
             
+            // VEZBA 9
+            
+            // 1. Napisati funkciju koja ispisuje neki tekst. U glavnom programu pozvati tu funkciju.
+            
+            // Echo je funkcija napravljena umesto Console.WriteLine
+
+            Echo($"Prva funkcija");
+            Echo($"Druga funkcija");
+            Echo($"Treca funkcija");
+            
+            // 2. Napisati funkciju za računanje zbira dva broja. U glavnom programu pozvati tu funkciju.
+
+            int a;
+            int b;
+            Echo("Napisite prvi broj:");
+            a = int.Parse(Console.ReadLine());
+            Echo("Napisite drugi broj:");
+            b = int.Parse(Console.ReadLine());
+            int zbir;
+            zbir = Sabiranje(a, b);
+            Echo($"Zbir je {zbir}");
+            
+            // 3. Napisati funkciju koja broji koliko puta se pojavilo slovo a u nekoj reči ili rečenici. U
+            // glavnom programu pozvati tu funkciju.
+            
             
             
             
             
             
         }
+        
+        // Functions:
+        
+        static void Echo(string tekst)
+        {
+            Console.WriteLine($"{tekst}");
+        }
+        
+        static int Sabiranje(int a, int b)
+        {
+            int zbir;
+            zbir = a + b;
+            return zbir;
+        }
+        
+        
+        
+        
+        
+        
     }
 }
