@@ -1007,15 +1007,8 @@ namespace FirstProject
 
             Console.WriteLine();
             Console.WriteLine("Nizu Y pripadaju brojevi:");
-
-            for (int i = 0; i < y.Length; i++)
-            {
-                if (x[i] % 2 != 0)
-                {
-                    y[i] = x[i];
-                    Console.Write($"{y[i]} ");
-                }
-            }
+            
+            
 
             // 9. Niz X[20] čine slučajni brojevi od 1 - 15, a niz Y čine samo elementi koji se pojave u nizu X dva ili više puta.
 
@@ -1183,6 +1176,43 @@ namespace FirstProject
             // 3. Napisati funkciju koja broji koliko puta se pojavilo slovo a u nekoj reči ili rečenici. U
             // glavnom programu pozvati tu funkciju.
             
+            string tekst;
+            Echo("Upisite neki tekst:");
+            tekst = Console.ReadLine();
+
+            int slovoA;
+            slovoA = SlovoA(tekst);
+            Console.WriteLine($"Slovo A se pojavljuje {slovoA} puta");
+
+            // 4. Napisati funkciju koja vraća max broj u nizu. U glavnom programu ispisati taj broj.
+            
+            int[] niz = new int[10];
+            Random rnd = new Random();
+            Console.WriteLine($"Nasumicni niz je:");
+            for (int i = 0; i < niz.Length; i++)
+            {
+                niz[i] = rnd.Next(1, 30);
+                Console.Write($"{niz[i]} ");
+            }
+            
+            // 5. Napisati funkciju koja ispisuje parne brojeve niza. U glavnom programu pozvati tu funkciju.
+
+            int[] niz = new int[10];
+            Random rnd = new Random();
+            Console.WriteLine($"Nasumicni niz je:");
+            for (int i = 0; i < niz.Length; i++)
+            {
+                niz[i] = rnd.Next(1, 30);
+                Console.Write($"{niz[i]} ");
+            }
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -1203,6 +1233,32 @@ namespace FirstProject
             zbir = a + b;
             return zbir;
         }
+        
+        static int SlovoA(string tekst)
+        {
+            int brojac = 0;
+            foreach (var slovo in tekst)
+            {
+                if (slovo == 'a')
+                {
+                    brojac++;
+                }
+            }
+            return brojac;
+        }
+        
+        static int Parni(int[] niz)
+        {
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if (niz[i] % 2 == 0)
+                {
+                    
+                }
+            }
+        }
+        
+        
         
         
         
