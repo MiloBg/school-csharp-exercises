@@ -1210,6 +1210,77 @@ namespace FirstProject
             
             
             
+            // VEZBA 10 Fajlovi i Folderi
+            
+            // 1. Na D particiji kreirati fajl sa vašim imenom i prezimenom sa txt ekstenzijom npr. PeraPeric.txt
+
+            string putanja = @"d:\temp\MilovanSrdanovic.txt";
+            //File.CreateText(putanja);
+
+            // 2. U kreiranom fajlu ubaciti tri reda teksta i to: broj indeksa, datum rođenja, godina studija (slovima)
+
+            //if (File.Exists(putanja))
+            //{
+            //    using (StreamWriter sw = File.AppendText(putanja))
+            //    {
+            //        sw.WriteLine("2i1/0107/20");
+            //        sw.WriteLine("21.05.1988.");
+            //        sw.WriteLine("Prva godina studija");
+            //    }
+            //}
+
+            // 3. Na D particiji kreirati folder Vezba10, u njega iskopirati kreirani fajl. Preimenujte fajl u vaše inicijale npr. PP.txt
+            // i dodati još dva reda u njemu teksta visina i tezina i iščitajte fajl.
+
+            string putanjaFolder = @"d:\Vezba10\";
+            //Directory.CreateDirectory(putanjaFolder);
+
+            string putanjaFajl = @"d:\Vezba10\MS.txt";
+            //File.Copy(putanja, putanjaFajl);
+
+            //if (File.Exists(putanjaFajl))
+            //{
+            //    using (StreamWriter sw = File.AppendText(putanjaFajl))
+            //    {
+            //        sw.WriteLine("Visina 190cm");
+            //        sw.WriteLine("Tezina 78kg");
+            //    }
+            //}
+
+            //using (StreamReader sr = File.OpenText(putanjaFajl))
+            //{
+            //    string s = "";
+            //    while ((s = sr.ReadLine()) != null)
+            //    {
+            //        Console.WriteLine(s);
+            //    }
+            //}
+
+            // 4. Napravite fajlove u folderu Vezba10 fajl1.txt, fajl3.txt, fajl5.txt, fajl7.txt, fajl9.txt, fajl11.txt
+            // i fajl13.txt, potom preimenujte folder u 10Vezba i izlistajte sve fajlove koji su u njemu.
+
+            //int broj = 1;
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    string fajl1 = @"d:\Vezba10\fajl" + broj + ".txt";
+            //    broj += 2;
+            //}
+
+            //string[] fajlovi = System.IO.Directory.GetFiles(putanjaFolder);
+            //foreach (string s in fajlovi)
+            //{
+            //    Console.WriteLine(s);
+            //}
+
+            // 5. Napraviti folder Zatatak5 na D particiji u njemu napraviti 10 txt fajlova sa različitom dužinom naziva.
+            // Napraviti metodu kojom ćete u fajlovima sa parnom dužinom naziva ispisati 5 nasumična broja između 1 i 100,
+            // a u fajlovima sa neparnom dužinom naziva ispisati 6 nasumična broja između 100 i 200. Izlistati fajlove sa podacima ispod svakog fajla.
+
+            string zadatak5 = @"d:\Zadatak5\";
+            Directory.CreateDirectory(zadatak5);
+            
+            
+            
             
             
             
