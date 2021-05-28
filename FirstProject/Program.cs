@@ -306,14 +306,15 @@ namespace FirstProject
             
             // Zadatak 1 Unosi se lozinka, sve dok se ne unese ispravna lozinka program se ne prekida.
 
-            string lozinka = "Pera";
+            string lozinka = "password";
 
             do
             {
-                Console.WriteLine("Unesi lozinku");
+                Console.WriteLine("Unesite lozinku:");
                 lozinka = Console.ReadLine();
             }
-            while (lozinka != "Pera");  //Uslov
+            while (lozinka != "password"); //Uslov
+            Console.WriteLine("Tacno!");
 
             // Zadatak 2 Generišu se dva broja, sve dok je a veće od b ispisuju se ti brojevi (u jednoj liniji i između njih se ispisuje zarez).
             // U slučaju da je b veći izlazi se iz programa.
@@ -328,6 +329,7 @@ namespace FirstProject
                 Console.WriteLine(a + ", " + b);
             }
             while (a > b);
+            Console.WriteLine($"{b} je vece od {a}");
 
             // ili
 
@@ -346,35 +348,31 @@ namespace FirstProject
 
             // Zadatak 3 Unosi se broj sve dok se ne unese 0. Ispisati zbir tih brojeva.
 
-            int broj1, broj2, suma = 0;
-            Random rnd = new Random();
-
+            int broj, zbir = 0;
             do
             {
-                broj1 = rnd.Next(0, 10);
-                broj2 = rnd.Next(0, 10);
-                suma = broj1 + broj2;
-                Console.WriteLine($"Generisani su brojevi " + broj1 + " i broj " + broj2);
-                Console.WriteLine($"Zbir ta dva broja je " + suma);
-            } while (broj1 != 0);
+                Console.WriteLine("Unesite broj:");
+                broj = int.Parse(Console.ReadLine());
+                zbir = zbir + broj;
+            } while (broj != 0);
+            Console.WriteLine($"Zbir je {zbir}");
 
             // Zadatak 4 Generišu se slučajni brojevi od 10-60 sve dok se ne dobije broj deljiv sa 5.
             // Taj broj treba prikazati na ekranu. Prikazati broj pokušaja i srednju vrednost.
             
             int broj, brojac = 0, suma = 0, srednja = 0;
-
             Random rnd = new Random();
 
             do
             {
                 broj = rnd.Next(10, 60);
-                Console.WriteLine(broj);
+                Console.WriteLine($"Nasumicno dobijeni broj je {broj}");
                 brojac++;
                 suma += broj;
                 srednja = suma / brojac;
             } while (broj % 5 != 0);
 
-            Console.WriteLine("Broj " + broj + " je deljiv sa 5. Dobijen je iz " + brojac + " pokusaja. Srednja vrednost je " + srednja);
+            Console.WriteLine("Broj " + broj + " je deljiv sa 5. Dobijen je iz " + brojac + " pokusaja. Srednja vrednost dobijenih brojeva je " + srednja);
 
             // Zadatak 5 Unosi se broj sve dok je u intervalu od 10-30. Izračunati sumu parnih i broj neparnih brojeva.
 
@@ -382,7 +380,7 @@ namespace FirstProject
 
             do
             {
-                Console.WriteLine("Unesite broj izmedju 1 i 30:");
+                Console.WriteLine("Unesite broj izmedju 10 i 30:");
                 broj = int.Parse(Console.ReadLine());
                 if (broj >= 10 && broj <= 30 && broj % 2 == 0)
                 {
@@ -396,7 +394,7 @@ namespace FirstProject
                     Console.WriteLine("Uneseni broj nije u rasponu od 10 do 30");
                 }
             } while (broj >= 10 && broj <= 30);
-            Console.WriteLine($"Pre broja van raspona, suma parnih brojeva je {suma}, a broj neparnih je {brojac}");
+            Console.WriteLine($"Pre broja van raspona, zbir parnih brojeva je {suma}, a broj neparnih je {brojac}");
 
             // Zadatak 6 Generišu se dva broja u intervalu od 1-100. Ako je drugi broj veći od prvog,
             // prvi broj se uvećava dva puta sve dok ne bude veći od drugog. Ispisati koliko je prvi broj puta morao da se uveća.
@@ -418,7 +416,22 @@ namespace FirstProject
 
             // Zadatak 7 Unose se brojevi sve dok je zbir svakog trećeg broja manji od 30. Nakon toga ispisati koliko brojeva je uneto i njihov zbir.
             
-            
+                        int a, b, c, zbir = 0, brojac = 0, suma = 0;
+            do
+            {
+                Console.WriteLine("Unesite broj:");
+                a = int.Parse(Console.ReadLine());
+                brojac++;
+                Console.WriteLine("Unesite broj:");
+                b = int.Parse(Console.ReadLine());
+                brojac++;
+                Console.WriteLine("Unesite broj:");
+                c = int.Parse(Console.ReadLine());
+                brojac++;
+                zbir = zbir + c;
+                suma = suma + a + b + c;
+            } while (zbir < 30);
+            Console.WriteLine($"Kolicina unetih brojeva je {brojac}, a zbir svih unetih brojeva je {suma}");
 
             // Zadatak 8 Unosi se broj od 1-20. Nakon toga se generišu brojevi od 1 - 20 sve dok generisani broj ne bude jednak unetom broju,
             // ili broj pokušaja ne bude manji od 20.
@@ -506,6 +519,8 @@ namespace FirstProject
 
             // Zadatak 10 Unose se brojevi sve dok se ne unese dva puta broj deljiv sa 5.
             // Svaki put kada se unese broj deljiv sa 3 resetuje se brojač petica. Ispisati srednju vrednost parnih brojeva.
+            
+            
             
             // DODATNI ZADACI 1
 
