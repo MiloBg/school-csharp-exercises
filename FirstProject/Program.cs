@@ -609,6 +609,51 @@ namespace FirstProject
             
             
             
+            // 4. Policajac meri brzinu u naseljenom mestu. Potrebno je napraviti program u koji će policajac
+            // uneti izmerenu brzinu, a program će ispisati:
+            // a. za brzinu manju ili jednaku 60 -nema kazne;
+            // b. za brzinu do 70 -1000 dinara kazne;
+            // c. za brzinu do 80 -2000 dinara kazne;
+            // d. brzinu do 90 -3000 dinara kazne;
+            // e.preko 90 -oduzimanje dozvole;
+            
+            
+            
+            
+            // 5. Uraditi program pod 4) tako da se izvrši provera za 10 kola.
+            
+            for (int i = 0; i < 10; i++)
+            {
+                int brzina;
+                Console.WriteLine("Unesite izmerenu brzinu:");
+                brzina = int.Parse(Console.ReadLine());
+                if (brzina <= 60)
+                {
+                    Console.WriteLine("Bez kazne. Samo tako nastavite!");
+                }
+                else if (brzina > 60 && brzina <= 70)
+                {
+                    Console.WriteLine("1000 dinara kazne!");
+                }
+                else if (brzina > 70 && brzina <= 80)
+                {
+                    Console.WriteLine("2000 dinara kazne!");
+                }
+                else if (brzina > 80 && brzina <= 90)
+                {
+                    Console.WriteLine("3000 dinara kazne!");
+                }
+                else
+                {
+                    Console.WriteLine("Oduzimanje dozvole!");
+                }
+            }
+            Console.WriteLine("Izvrsena je provera 10 automobila");
+            
+            // 6. Uraditi program pod 4) tako da se izvršava provera sve dok policajac ne kazni 5 vozača.
+            
+            
+            
             
             
             // VEZBA 6 Petlje SWITCH CASE, TRY - CATCH - FINAL i FOREACH
