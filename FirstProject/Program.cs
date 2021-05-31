@@ -652,6 +652,40 @@ namespace FirstProject
             
             // 6. Uraditi program pod 4) tako da se izvršava provera sve dok policajac ne kazni 5 vozača.
             
+            for (int i = 0; i < 5;)
+            {
+                int brzina;
+                Console.WriteLine("Unesite izmerenu brzinu:");
+                brzina = int.Parse(Console.ReadLine());
+                if (brzina <= 60)
+                {
+                    Console.WriteLine("Bez kazne. Samo tako nastavite!");
+                }
+                else if (brzina > 60 && brzina <= 70)
+                {
+                    Console.WriteLine("1000 dinara kazne!");
+                    i++;
+                }
+                else if (brzina > 70 && brzina <= 80)
+                {
+                    Console.WriteLine("2000 dinara kazne!");
+                    i++;
+                }
+                else if (brzina > 80 && brzina <= 90)
+                {
+                    Console.WriteLine("3000 dinara kazne!");
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine("Oduzimanje dozvole!");
+                    i++;
+                }
+            }
+            Console.WriteLine("Kaznjeno je 5 vozaca");
+            
+            // 7. Prikaži srednji broj od tri cela broja a, b i c.
+            
             
             
             
