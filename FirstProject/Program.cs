@@ -686,6 +686,18 @@ namespace FirstProject
             
             // 7. Prikaži srednji broj od tri cela broja a, b i c.
             
+            decimal a, b, c;
+            decimal srednji = 0;
+
+            Console.WriteLine("Unesite prvi broj:");
+            a = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite drugi broj:");
+            b = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Unesite treci broj:");
+            c = decimal.Parse(Console.ReadLine());
+            srednji = (a + b + c) / 3;
+            Console.WriteLine($"Prosek je {srednji}");
+            
             
             
             
