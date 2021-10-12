@@ -1390,6 +1390,67 @@ namespace FirstProject
             
             
             
+            // DRUGA GODINA
+            
+            // Nacrtati algoritamsku šemu i napisati program koji od korisnika traži unos dva broja i ispisuje manji.
+
+            //int a, b;
+            //Console.WriteLine("Unesite prvi broj: ");
+            //a = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Unesite drugi broj: ");
+            //b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Uneti brojevi su {a} i {b}");
+
+            if (a < b)
+            {
+                Console.WriteLine($"Broj {a} je manji.");
+            }
+            else if (b < a)
+            {
+                Console.WriteLine($"Broj {b} je manji.");
+            }
+            else
+            {
+                Console.WriteLine("Unesite razlicite brojeve i pokrenite program ponovo");
+            }
+
+            // Nacrtati algoritamsku šemu i napisati program koji generiše slučajan broj između 1 i 30.
+            // U slučaju da je deljiv sa 3 ispisati poruku “Broj je deljiv sa 3”, ako je u interval između 10 i 20.
+            // Ako je broj deljiv sa 5, ispisati poruku “Broj je deljiv sa 5”.
+            // Na kraju u svakom slučaju ispisati poruku “Generisan je broj X”, gde je X generisani broj.
+
+            Random rnd = new Random();
+            int x = rnd.Next(1, 31);
+
+            if (x % 3 == 0 && x > 10 && x < 20)
+            {
+                Console.WriteLine("Broj je deljiv sa 3");
+            }
+            else if (x % 5 == 0)
+            {
+                Console.WriteLine("Broj je deljiv sa 5");
+            }
+
+            Console.WriteLine($"Generisan je broj {x}");
+
+            // Nacrtati algoritamsku šemu i napisati program koji traži od korisnika da se unose brojevi
+            // sve dok se ne unese broj koji je deljiv sa 5, nakon čega se ispisuje poruka „Uneli ste broj
+            // koji je deljiv sa 5“.
+
+            int c;
+
+            do
+            {
+                Console.WriteLine("Unesite broj: ");
+                c = int.Parse(Console.ReadLine());
+            } while (c % 5 != 0);
+
+            Console.WriteLine("Uneli ste broj koji je deljiv sa 5");
+            
+            
+            
+            
             
             
             
