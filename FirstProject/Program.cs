@@ -1448,6 +1448,23 @@ namespace FirstProject
 
             Console.WriteLine("Uneli ste broj koji je deljiv sa 5");
             
+            // Nacrtati algoritamsku šemu i napisati program koji izračunava sumu brojeva od 1 do N,
+            // gde je N pozitivan broj unet od strane korisnika.
+
+            int n;
+            int zbir = 0;
+            int i = 1;
+            Console.WriteLine("Unesite broj: ");
+            n = int.Parse(Console.ReadLine());
+
+            while (i <= n)
+            {
+                zbir += i;
+                i++;
+            }
+
+            Console.WriteLine($"Konacni zbir je {zbir}");
+            
             
             
             
