@@ -1465,6 +1465,78 @@ namespace FirstProject
 
             Console.WriteLine($"Konacni zbir je {zbir}");
             
+            // ALGORITMI ZADATAK 3
+            
+            Console.WriteLine("1. Napisati matricu od 5 redova i 5 kolona, sa vrednostima redom od 1 do 25");
+
+            int[,] x = new int[5, 5];
+            int brojacX = 1;
+
+            for (int i = 0; i < x.GetLength(0); i++)
+            {
+                for (int j = 0; j < x.GetLength(1); j++)
+                {
+                    x[i, j] = brojacX++;
+                }
+            }
+
+            for (int i = 0; i < x.GetLength(0); i++)
+            {
+                for (int j = 0; j < x.GetLength(1); j++)
+                {
+                    Console.Write(x[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("2. Napisati matricu od 5 redova i 5 kolona, sa nasumičnim vrednostima od 10 do 99");
+
+            int[,] y = new int[5, 5];
+            Random rnd2 = new Random();
+
+            for (int i = 0; i < y.GetLength(0); i++)
+            {
+                for (int j = 0; j < y.GetLength(1); j++)
+                {
+                    y[i, j] = rnd2.Next(10, 100);
+                }
+            }
+
+            for (int i = 0; i < y.GetLength(0); i++)
+            {
+                for (int j = 0; j < y.GetLength(1); j++)
+                {
+                    Console.Write(y[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("3. Ispisati šahovsku tablu gde 0 predstavlja belo polje, a 1 crno.");
+
+            int[,] z = new int[8, 8];
+            int crnoPolje = 1;
+
+            for (int i = 0; i < z.GetLength(0); i++)
+            {
+                for (int j = 0; j < z.GetLength(1); j++)
+                {
+                    if ((i + j) % 2 != 0 )
+                    {
+                        z[i, j] = crnoPolje;
+                    }
+                }
+            }
+
+            for (int i = 0; i < z.GetLength(0); i++)
+            {
+                for (int j = 0; j < z.GetLength(1); j++)
+                {
+                    Console.Write(z[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            
+            
             
             
             
